@@ -47,7 +47,7 @@ AEM Content AI服务支持两种身份验证方法。 选择与您的集成匹�
 
    >[!NOTE]
    >
-   >如果API卡因“需要许可证”消息而被禁用，则您的AEM as a Cloud Service环境可能无法实现现代化。 请参阅[AEM as a Cloud Service环境的现代化](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/aem-apis/openapis/setup#modernization-of-aem-as-a-cloud-service-environment)。
+   >如果API卡因“需要许可证”消息而被禁用，则您的AEM as a Cloud Service环境可能无法实现现代化。 请参阅[AEM as a Cloud Service环境的现代化](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-learn/cloud-service/aem-apis/openapis/setup#modernization-of-aem-as-a-cloud-service-environment)。
 
 1. 在&#x200B;**[!UICONTROL 配置API]**&#x200B;对话框中，选择&#x200B;**[!UICONTROL 服务器到服务器]**&#x200B;身份验证。
 

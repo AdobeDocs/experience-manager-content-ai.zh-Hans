@@ -23,7 +23,7 @@ ht-degree: 1%
 在开始之前，请确保满足以下条件：
 
 * 您有一个有效的Cloud Manager项目，其中至少有一个AEM as a Cloud Service环境。
-* 您在Admin Console中为程序担任&#x200B;**[系统管理员](https://experienceleague.adobe.com/en/docs/support-resources/adobe-support-tools-guide/adobe-admin-console/admin-roles)**&#x200B;角色。
+* 您在Admin Console中为程序担任&#x200B;**[系统管理员](https://experienceleague.adobe.com/zh-hans/docs/support-resources/adobe-support-tools-guide/adobe-admin-console/admin-roles)**&#x200B;角色。
 * 已在&#x200B;**Adobe Admin Console**&#x200B;中配置环境产品配置文件，请参阅[设置Adobe Developer Console项目](setup-adc-project.md)。
 
 ## 步骤1 — 打开内容人工智能配置选项卡 {#open-tab}
