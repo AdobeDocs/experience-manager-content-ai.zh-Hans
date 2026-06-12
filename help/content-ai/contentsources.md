@@ -1,136 +1,136 @@
 ---
-title: 设置和管理您的Content AI源
-description: 了解如何通过设置您的第一个内容源并触发客户获取，在Cloud Manager中配置AEM内容人工智能。
+title: 设置和管理您的内容人工智能源
+description: 了解如何在 Cloud Manager 中配置 AEM 内容人工智能，包括设置您的第一个内容源并触发内容获取。
 topic: Configuration
 role: Developer, Admin
 level: Beginner
 solution: Experience Manager
-keywords: AEM Content AI， Content AI Sources，客户获取， Cloud Manager， Adobe Developer Console
+keywords: AEM 内容人工智能、内容人工智能源、内容获取、Cloud Manager、Adobe Developer Console
 source-git-commit: 86c0b8b910583701dc4bd42b61e082cc5429cee8
 workflow-type: tm+mt
 source-wordcount: '928'
-ht-degree: 1%
+ht-degree: 100%
 
 ---
 
 
-# 设置和管理您的Content AI源
+# 设置和管理您的内容人工智能源
 
-本指南将指导您在Cloud Manager中设置内容人工智能源，包括满足先决条件以及创建内容源并确认其已编制索引和可用。
+本指南将引导您在 Cloud Manager 中设置内容人工智能源，包括满足先决条件、创建内容源，以及确认内容已建立索引并可供使用。
 
 ## 先决条件 {#prerequisites}
 
-在开始之前，请确保满足以下条件：
+开始之前，请确保满足以下条件：
 
-* 您有一个有效的Cloud Manager项目，其中至少有一个AEM as a Cloud Service环境。
-* 您在Admin Console中为程序担任&#x200B;**[系统管理员](https://experienceleague.adobe.com/zh-hans/docs/support-resources/adobe-support-tools-guide/adobe-admin-console/admin-roles)**&#x200B;角色。
-* 已在&#x200B;**Adobe Admin Console**&#x200B;中配置环境产品配置文件，请参阅[设置Adobe Developer Console项目](setup-adc-project.md)。
+* 您拥有一个处于活动状态的 Cloud Manager 程序，并且其中至少包含一个 AEM as a Cloud Service 环境。
+* 您在该程序对应的 Admin Console 中拥有&#x200B;**[系统管理员](https://experienceleague.adobe.com/zh-hans/docs/support-resources/adobe-support-tools-guide/adobe-admin-console/admin-roles)**&#x200B;角色。
+* 该环境的产品轮廓已在 **Adobe Admin Console** 中完成配置。请参阅[设置 Adobe Developer Console 项目](setup-adc-project.md)。
 
-## 步骤1 — 打开内容人工智能配置选项卡 {#open-tab}
+## 步骤 1：打开“内容人工智能配置”选项卡 {#open-tab}
 
-1. 登录到[Cloud Manager](https://my.cloudmanager.adobe.com/)并选择您的程序。
+1. 登录 [Cloud Manager](https://my.cloudmanager.adobe.com/) 并选择您的程序。
 
-   显示程序卡的![Cloud Manager主页](../assets/content-ai-onboarding-step-1.png)
+   ![显示程序卡的 Cloud Manager 主页](../assets/content-ai-onboarding-step-1.png)
 
-1. 从&#x200B;**[!UICONTROL 项目概述]**&#x200B;中，找到&#x200B;**[!UICONTROL 环境]**&#x200B;部分，然后选择要配置的环境。
+1. 在&#x200B;**[!UICONTROL 程序概览]**&#x200B;页面中，找到&#x200B;**[!UICONTROL 环境]**&#x200B;部分，然后选择要配置的环境。
 
-   ![在生产环境中突出显示的项目概述](../assets/content-ai-onboarding-step-2.png)
+   ![突出显示生产环境的程序概述](../assets/content-ai-onboarding-step-2.png)
 
-1. 在环境详细信息页面上，选择&#x200B;**[!UICONTROL Content AI配置]**&#x200B;选项卡。
+1. 在环境详细信息页面中，选择 **[!UICONTROL 内容人工智能配置]**&#x200B;选项卡。
 
-   ![突出显示了“内容人工智能配置”选项卡的环境详细信息页面](../assets/content-ai-onboarding-step-3.png)
+   ![突出显示“内容人工智能配置”选项卡的环境详细信息页面](../assets/content-ai-onboarding-step-3.png)
 
-## 步骤2 — 创建内容人工智能Source {#create-source}
+## 步骤 2：创建内容人工智能源 {#create-source}
 
-内容源定义Content AI抓取和索引的网站。
+内容源用于定义内容人工智能将要抓取和建立索引的网站。
 
-1. 在&#x200B;**[!UICONTROL Content AI配置]**&#x200B;选项卡上，选择&#x200B;**[!UICONTROL 创建Source]**。
+1. 在 **[!UICONTROL 内容人工智能配置]**&#x200B;选项卡中，选择&#x200B;**[!UICONTROL 创建源]**。
 
-   ![显示“创建Source”按钮的“内容人工智能配置”选项卡](../assets/content-ai-onboarding-step-4.png)
+   ![显示“创建源”按钮的“内容人工智能配置”选项卡](../assets/content-ai-onboarding-step-4.png)
 
-1. 在&#x200B;**[!UICONTROL 创建/添加新内容AI Source]**&#x200B;对话框中，填写以下字段：
+1. 在&#x200B;**[!UICONTROL 创建/添加新的内容人工智能源]**&#x200B;对话框中，填写以下字段：
 
    | 字段 | 描述 |
    | --- | --- |
-   | **[!UICONTROL Content AI配置名称]** | 此源的唯一标识符（例如，`my-site-index`）。 创建后无法更改。 |
-   | **[!UICONTROL 描述]** | *（可选）*&#x200B;内容源的简短说明。 |
-   | **[!UICONTROL 网址]** | 要抓取的网站的根URL（例如，`https://www.example.com/`）。 |
-   | **[!UICONTROL 排除URL]** | 抓取期间要跳过的&#x200B;*（可选）* URL模式。 |
-   | **[!UICONTROL 刷新频率]** | 内容人工智能重新抓取源的频率：每周、每天、每日4×、60分钟或15分钟。 |
+   | **[!UICONTROL 内容人工智能配置名称]** | 此源的唯一标识符（例如：`my-site-index`）。 创建后无法修改。 |
+   | **[!UICONTROL 描述]** | *（可选）*&#x200B;内容源的简要说明。 |
+   | **[!UICONTROL 网站地址]** | 要抓取的网站根 URL（例如：`https://www.example.com/`）。 |
+   | **[!UICONTROL 排除 URL]** | *（可选）*&#x200B;抓取过程中需要跳过的 URL 模式。 |
+   | **[!UICONTROL 刷新频率]** | 内容人工智能重新抓取该源的频率：每周、每天、每天 4 次、每 60 分钟或每 15 分钟。 |
 
-   ![创建内容人工智能Source对话框，其中填写了名称和网站地址字段，并突出显示了“创建Source”按钮](../assets/content-ai-onboarding-step-5-0.png)
+   ![“创建内容人工智能源”对话框，其中名称和网站地址字段已填写，并突出显示“创建源”按钮](../assets/content-ai-onboarding-step-5-0.png)
 
-   显示可用选项的![刷新频率下拉列表](../assets/content-ai-onboarding-step-5-1.png)
+   ![显示可用选项的刷新频率下拉列表](../assets/content-ai-onboarding-step-5-1.png)
 
-1. 选择&#x200B;**[!UICONTROL 创建Source]**。
+1. 选择&#x200B;**[!UICONTROL 创建源]**。
 
-## 步骤3 — 触发客户获取 {#trigger-acquisition}
+## 步骤 3：触发内容获取 {#trigger-acquisition}
 
-创建源后，其状态为&#x200B;**新建**。 运行初始客户获取以开始编制索引。
+创建源后，其状态为&#x200B;**新建**。 执行首次内容获取以开始建立索引。
 
-1. 在源列表中，选择源旁边的&#x200B;**更多操作** (...)图标，然后选择&#x200B;**[!UICONTROL 触发客户获取]**。
+1. 在源列表中，选择源旁边的&#x200B;**更多操作**（…）图标，然后选择&#x200B;**[!UICONTROL 触发获取]**。
 
-   ![打开了“更多操作”菜单并突出显示触发器客户获取的内容人工智能源列表](../assets/content-ai-onboarding-step-7.png)
+   ![内容人工智能源列表，其中“更多操作”菜单已展开，并突出显示“触发获取”选项](../assets/content-ai-onboarding-step-7.png)
 
-1. 在&#x200B;**[!UICONTROL 触发器获取]**&#x200B;对话框中，查看源详细信息 — **[!UICONTROL 内容源]**、**[!UICONTROL 上次运行]**&#x200B;和&#x200B;**[!UICONTROL 下次计划运行]** — 并选择&#x200B;**[!UICONTROL 触发器]**。
+1. 在&#x200B;**[!UICONTROL 触发获取]**&#x200B;对话框中，检查源详细信息（包括&#x200B;**[!UICONTROL 内容源]**、**[!UICONTROL 上次运行时间]**&#x200B;和&#x200B;**[!UICONTROL 下次计划运行时间]**），然后选择&#x200B;**[!UICONTROL 触发]**。
 
-   ![触发客户获取确认对话框](../assets/content-ai-onboarding-step-8.png)
+   ![“触发获取”确认对话框](../assets/content-ai-onboarding-step-8.png)
 
-## 步骤4 — 监控索引状态 {#monitor-status}
+## 步骤 4：监控索引状态 {#monitor-status}
 
-客户获取开始后，源状态会实时更新。
+内容获取开始后，源状态会实时更新。
 
 | 状态 | 含义 |
 | --- | --- |
-| **新建** | 已创建Source；尚未运行任何客户获取。 |
-| **索引** | 正在获取；正在抓取内容并将其编入索引。 |
-| **可用** | 索引已完成；源已准备好提供搜索查询。 |
+| **新建** | 源已创建，但尚未执行内容获取。 |
+| **正在索引** | 内容获取正在进行中；系统正在抓取内容并建立索引。 |
+| **可用** | 索引已完成，源已可用于搜索查询。 |
 
-![显示索引状态的内容源列表](../assets/content-ai-onboarding-step-9.png)
+![显示“正在索引”状态的内容源列表](../assets/content-ai-onboarding-step-9.png)
 
-![内容源列表显示可用状态](../assets/content-ai-onboarding-step-10.png)
+![显示“可用”状态的内容源列表](../assets/content-ai-onboarding-step-10.png)
 
-在搜索索引或测试API之前，等待状态达到&#x200B;**可用**。
+在搜索索引内容或测试 API 之前，请等待状态变为&#x200B;**可用**。
 
-## 步骤5 — 搜索索引内容 {#search-content}
+## 步骤 5：搜索已建立索引的内容 {#search-content}
 
-在源状态为&#x200B;**可用**&#x200B;后，您可以直接从Cloud Manager运行搜索查询以验证内容是否已正确编入索引。
+当源状态变为&#x200B;**可用**&#x200B;后，您可以直接在 Cloud Manager 中执行搜索查询，以验证内容是否已正确建立索引。
 
 1. 在源列表中，选择源旁边的&#x200B;**[!UICONTROL 搜索]**。
 
-   ![在可用源上突出显示“搜索”按钮的内容源列表](../assets/content-ai-onboarding-step-13.png)
+   ![“内容源”列表，其中某个可用源的“搜索”按钮已突出显示](../assets/content-ai-onboarding-step-13.png)
 
-1. 在搜索字段中输入查询。 结果将显示具有匹配得分和内容类型的匹配项列表（例如，**PAGE**&#x200B;或&#x200B;**PDF**）。 选择结果将在右侧打开预览。
+1. 在搜索框中输入查询内容。 搜索结果会显示匹配项列表，并包含匹配得分以及内容类型（例如 **PAGE** 或 **PDF**）。 选择某个结果后，会在右侧打开预览窗口。
 
-   ![包含查询、匹配得分和排名最前结果预览窗格的搜索面板](../assets/content-ai-onboarding-step-14.png)
+   ![搜索面板，其中包含搜索查询、带匹配分数的匹配结果，以及用于显示排名第一结果的预览窗格](../assets/content-ai-onboarding-step-14.png)
 
-## 修改或删除Source {#modify-source}
+## 修改或删除源 {#modify-source}
 
-要在创建源配置后对其进行更新，请执行以下操作：
+若要在创建后更新源配置：
 
-1. 在源列表中，选择源旁边的&#x200B;**更多操作** (...)图标，然后选择&#x200B;**[!UICONTROL 编辑]**。
+1. 在源列表中，选择源旁边的&#x200B;**更多操作**（…）图标，然后选择&#x200B;**[!UICONTROL 编辑]**。
 
-   ![打开了“更多操作”菜单并突出显示了“编辑”的“内容源”列表](../assets/content-ai-onboarding-step-11.png)
+   ![内容源列表，其中“更多操作”菜单已展开，并突出显示“编辑”选项](../assets/content-ai-onboarding-step-11.png)
 
-1. 在&#x200B;**[!UICONTROL 修改内容人工智能Source]**&#x200B;对话框中，根据需要更新&#x200B;**[!UICONTROL 描述]**、**[!UICONTROL 网站地址]**、**[!UICONTROL 排除URL]**&#x200B;或&#x200B;**[!UICONTROL 刷新频率]**。 **[!UICONTROL Content AI配置名称]**&#x200B;是只读的，无法更改。
+1. 在&#x200B;**[!UICONTROL 修改内容人工智能源]**&#x200B;对话框中，根据需要更新&#x200B;**[!UICONTROL 描述]**、**[!UICONTROL 网站地址]**、**[!UICONTROL 排除 URL]**&#x200B;或&#x200B;**[!UICONTROL 刷新频率]**。 **[!UICONTROL 内容人工智能配置名称]**&#x200B;为只读字段，无法修改。
 
-1. 选择&#x200B;**[!UICONTROL 保存]**&#x200B;以应用更改，或选择对话框左下角的&#x200B;**[!UICONTROL 删除]**&#x200B;以完全删除源。
+1. 选择&#x200B;**[!UICONTROL 保存]**&#x200B;以应用更改，或者选择对话框左下角的&#x200B;**[!UICONTROL 删除]**&#x200B;以彻底删除该源。
 
    >[!WARNING]
    >
-   >删除源是永久性的。 该源的所有索引内容都将被删除，并且无法再提供搜索查询。
+   >删除源后无法恢复。 与该源关联的所有已建立索引的内容都会删除，并且无法再用于搜索查询。
 
-   ![修改内容人工智能Source对话框，其中可编辑字段突出显示，并且左下角显示“删除”按钮](../assets/content-ai-onboarding-step-12.png)
+   ![“修改内容人工智能源”对话框，其中可编辑字段已突出显示，左下角显示“删除”按钮](../assets/content-ai-onboarding-step-12.png)
 
-源列表会更新以反映所做的更改。 如果删除了源，则该源不再出现在列表中。
+源列表会更新并显示您所做的更改。 如果您删除了该源，它将不再显示在列表中。
 
 ## 后续步骤 {#next-steps}
 
-* [设置Adobe Developer Console项目](setup-adc-project.md) — 创建调用API所需的ADC项目和凭据。
-* [内容人工智能API引用](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/experimental/contentai/) — 使用语义、全文或混合搜索端点查询已索引的内容。
+* [设置 Adobe Developer Console 项目](setup-adc-project.md)：创建调用 API 所需的 ADC 项目和凭据。
+* [内容人工智能API 参考](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/experimental/contentai/)：使用语义搜索、全文搜索或混合搜索端点查询已建立索引的内容。
 
-## 疑难解答 {#troubleshooting}
+## 故障排除 {#troubleshooting}
 
-* **Source在[!UICONTROL 索引]中保留较长时间。** 从(...)菜单重试客户获取。 如果第二次运行后状态未提升，请验证&#x200B;**[!UICONTROL 网站地址]**&#x200B;是否可公开访问，以及&#x200B;**[!UICONTROL 排除URL]**&#x200B;模式是否不会过滤掉每个页面。
-* 运行后&#x200B;**Source移回[!UICONTROL 新建]。** 爬虫无法从配置的根URL获取任何页面。 确认URL使用`200 OK`进行响应，并且站点未阻止自动请求。
-* **[!UICONTROL 搜索]未返回[!UICONTROL 可用]源的结果。** 索引成功，但没有与查询匹配的内容。 尝试更广泛的查询，或检查抓取的URL是否包含您期望的页面。
+* **源长时间停留在[!UICONTROL 正在索引]状态。** 从“（…）”菜单中重新触发内容获取。 如果第二次运行后状态仍未推进，请确认&#x200B;**[!UICONTROL 网站地址]**&#x200B;可从公共网络访问，并确保&#x200B;**[!UICONTROL 排除 URL]** 规则没有将所有页面全部过滤掉。
+* **源在运行后又恢复为[!UICONTROL 新建]状态。** 爬虫无法从配置的根 URL 获取任何页面。 请确认该 URL 返回 `200 OK` 响应，并且网站未阻止自动化请求。
+* 对状态为[!UICONTROL 可用]的源执行&#x200B;**[!UICONTROL 搜索]时未返回结果。** 索引已成功建立，但没有内容与查询条件匹配。 请尝试使用范围更广的查询条件，或检查已抓取的 URL 是否包含您期望的页面。
