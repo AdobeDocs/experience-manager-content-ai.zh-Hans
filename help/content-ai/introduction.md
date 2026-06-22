@@ -7,9 +7,9 @@ level: Beginner
 solution: Experience Manager
 keywords: AEM 内容人工智能、概述、内容源、语义搜索、内容获取、Cloud Manager
 source-git-commit: 9b3c63be1aa95339086ee5994cd4dd7cdfa7e746
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '713'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -71,4 +71,4 @@ MCP 和代理通过自然语言，将具体业务场景驱动的内容需求转�
 
 ## 了解内容人工智能 API  {#apis}
 
-探索 AEM 内容人工智能的丰富功能能力，这些 API 展现了该平台的完整潜力。 查看[内容人工智能API](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/experimental/contentai/)。
+探索 AEM 内容人工智能的丰富功能能力，这些 API 展现了该平台的完整潜力。 查看[内容人工智能 API](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/experimental/contentai/)。

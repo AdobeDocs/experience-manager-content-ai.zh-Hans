@@ -4,7 +4,7 @@ breadcrumb-title: AEM 内容人工智能
 user-guide-description: Experience Manager 内容人工智能
 solution: Experience Manager
 source-git-commit: 72430a6c1c553c2d14e7945d2c82714ff9356d08
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '27'
 ht-degree: 100%
 

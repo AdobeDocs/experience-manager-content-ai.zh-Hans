@@ -7,7 +7,7 @@ level: Beginner
 solution: Experience Manager
 keywords: AEM 内容人工智能、Adobe Developer Console、身份验证、服务器到服务器、API 密钥、访问令牌
 source-git-commit: 445aeafe64eb8a68d0770c1f1afb54d68e0b054f
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '674'
 ht-degree: 100%
 
