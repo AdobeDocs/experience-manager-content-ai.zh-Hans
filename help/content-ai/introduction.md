@@ -6,10 +6,10 @@ role: Developer, Admin
 level: Beginner
 solution: Experience Manager
 keywords: AEM 内容人工智能、概述、内容源、语义搜索、内容获取、Cloud Manager
-source-git-commit: 9b3c63be1aa95339086ee5994cd4dd7cdfa7e746
-workflow-type: ht
-source-wordcount: '713'
-ht-degree: 100%
+source-git-commit: 2ff1bbdd3ff224e2a6b389243c78af5fd228d5ee
+workflow-type: tm+mt
+source-wordcount: '716'
+ht-degree: 97%
 
 ---
 
@@ -67,7 +67,7 @@ MCP 和代理通过自然语言，将具体业务场景驱动的内容需求转�
 
 ### &#x200B;2. 管理您的内容人工智能源 {#control}
 
-设置并管理您的内容人工智能源，以支持 AI 驱动的体验。请参阅[管理您的内容源](contentsources.md)。
+设置和管理您的内容人工智能源以启用基于人工智能的体验，有关详细信息，请参阅[控制您的内容源](contentsources.md)。
 
 ## 了解内容人工智能 API  {#apis}
 
