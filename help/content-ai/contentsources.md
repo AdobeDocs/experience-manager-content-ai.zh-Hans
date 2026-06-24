@@ -6,10 +6,10 @@ role: Developer, Admin
 level: Beginner
 solution: Experience Manager
 keywords: AEM 内容人工智能、内容人工智能源、内容获取、Cloud Manager、Adobe Developer Console
-source-git-commit: 2ff1bbdd3ff224e2a6b389243c78af5fd228d5ee
+source-git-commit: d40fcb4a41c717ef4e6c82d95a36976b1f4de825
 workflow-type: tm+mt
-source-wordcount: '1225'
-ht-degree: 72%
+source-wordcount: '1276'
+ht-degree: 61%
 
 ---
 
@@ -96,11 +96,13 @@ ht-degree: 72%
 
    ![显示可用选项的刷新频率下拉列表](../assets/content-ai-onboarding-step-5-1.png)
 
-1. 选择&#x200B;**[!UICONTROL 创建源]**。
+1. 选择&#x200B;**[!UICONTROL 创建源]**。 自动开始客户获取，源将移至&#x200B;**索引**。
 
-## 步骤 3：触发内容获取 {#trigger-acquisition}
+   ![内容源列表显示索引状态中新创建的源](../assets/content-ai-onboarding-step-6.png)
 
-创建源后，其状态为&#x200B;**新建**。 执行首次内容获取以开始建立索引。
+## 步骤3 — 重新运行客户获取 {#trigger-acquisition}
+
+创建源时，客户获取会自动运行，然后按照&#x200B;**[!UICONTROL 刷新频率]**&#x200B;设置的计划运行。 您还可以随时手动触发运行 — 例如，在发布新内容后立即重新索引。
 
 1. 在源列表中，选择源旁边的&#x200B;**更多操作**（…）图标，然后选择&#x200B;**[!UICONTROL 触发获取]**。
 
@@ -116,7 +118,7 @@ ht-degree: 72%
 
 | 状态 | 含义 |
 | --- | --- |
-| **新建** | 源已创建，但尚未执行内容获取。 |
+| **新建** | Source刚刚创建；自动客户获取尚未开始。 此状态是短暂的。 |
 | **正在索引** | 内容获取正在进行中；系统正在抓取内容并建立索引。 |
 | **可用** | 索引已完成，源已可用于搜索查询。 |
 
@@ -130,15 +132,17 @@ ht-degree: 72%
 
 当源状态变为&#x200B;**可用**&#x200B;后，您可以直接在 Cloud Manager 中执行搜索查询，以验证内容是否已正确建立索引。
 
-1. 在源列表中，选择源旁边的&#x200B;**[!UICONTROL 搜索]**。
+1. 在源列表中，选择源旁边的&#x200B;**搜索** （放大镜）图标。
 
-   ![“内容源”列表，其中某个可用源的“搜索”按钮已突出显示](../assets/content-ai-onboarding-step-13.png)
+   ![在可用源上突出显示搜索图标的内容源列表](../assets/content-ai-onboarding-step-13.png)
 
 1. 在搜索框中输入查询内容。 搜索结果会显示匹配项列表，并包含匹配得分以及内容类型（例如 **PAGE** 或 **PDF**）。 选择某个结果后，会在右侧打开预览窗口。
 
    ![搜索面板，其中包含搜索查询、带匹配分数的匹配结果，以及用于显示排名第一结果的预览窗格](../assets/content-ai-onboarding-step-14.png)
 
 ## 修改或删除源 {#modify-source}
+
+### 修改源 {#modify}
 
 若要在创建后更新源配置：
 
@@ -148,15 +152,19 @@ ht-degree: 72%
 
 1. 在&#x200B;**[!UICONTROL 修改内容人工智能源]**&#x200B;对话框中，根据需要更新&#x200B;**[!UICONTROL 描述]**、**[!UICONTROL 网站地址]**、**[!UICONTROL 排除 URL]**&#x200B;或&#x200B;**[!UICONTROL 刷新频率]**。 **[!UICONTROL 内容人工智能配置名称]**&#x200B;为只读字段，无法修改。
 
-1. 选择&#x200B;**[!UICONTROL 保存]**&#x200B;以应用更改，或者选择对话框左下角的&#x200B;**[!UICONTROL 删除]**&#x200B;以彻底删除该源。
+   ![修改内容人工智能Source对话框，突出显示可编辑字段](../assets/content-ai-onboarding-step-12.png)
+
+1. 选择&#x200B;**[!UICONTROL 保存]**&#x200B;以应用更改。 源列表会更新并显示您所做的更改。
+
+### 删除源 {#delete}
+
+1. 在源列表中，选择源旁边的&#x200B;**更多操作** (...)图标，然后选择&#x200B;**[!UICONTROL 删除]**。
 
    >[!WARNING]
    >
    >删除源后无法恢复。 与该源关联的所有已建立索引的内容都会删除，并且无法再用于搜索查询。
 
-   ![“修改内容人工智能源”对话框，其中可编辑字段已突出显示，左下角显示“删除”按钮](../assets/content-ai-onboarding-step-12.png)
-
-源列表会更新并显示您所做的更改。 如果您删除了该源，它将不再显示在列表中。
+删除后，源不再显示在列表中。
 
 ## 后续步骤 {#next-steps}
 
