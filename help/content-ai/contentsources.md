@@ -9,7 +9,7 @@ keywords: AEM 内容人工智能、内容人工智能源、内容获取、Cloud 
 source-git-commit: d40fcb4a41c717ef4e6c82d95a36976b1f4de825
 workflow-type: tm+mt
 source-wordcount: '1276'
-ht-degree: 61%
+ht-degree: 88%
 
 ---
 
@@ -23,42 +23,42 @@ ht-degree: 61%
 开始之前，请确保满足以下条件：
 
 * 您拥有一个处于活动状态的 Cloud Manager 程序，并且其中至少包含一个 AEM as a Cloud Service 环境。
-* 您的用户已分配给目标环境的&#x200B;**AEM用户**&#x200B;产品配置文件，该配置文件允许用户查看内容源。
-* 您的用户已分配给目标环境的&#x200B;**AEM管理员**&#x200B;产品配置文件，该配置文件允许用户创建和编辑内容源。 仅访问Cloud Manager是不够的 — 请参阅下面的[将用户分配到AEM产品配置文件](#assign-product-profile)。
-* 已在&#x200B;**Adobe Admin Console**&#x200B;中配置环境产品配置文件。
+* 您的用户已分配到目标环境的 **AEM 用户**&#x200B;产品轮廓，该轮廓允许用户查看内容源。
+* 您的用户已分配到目标环境的 **AEM 管理员**&#x200B;产品轮廓，该轮廓允许用户创建和编辑内容源。 仅拥有 Cloud Manager 访问权限并不足够，请参阅下文的[将用户分配到 AEM 产品轮廓](#assign-product-profile)。
+* 环境产品轮廓已在 **Adobe Admin Console** 中完成配置。
 
-## 将用户分配给AEM产品配置文件 {#assign-product-profile}
+## 将用户分配到 AEM 产品轮廓 {#assign-product-profile}
 
-使用此过程可授予用户访问特定环境的[!DNL Adobe Experience Manager] as a Cloud Service的权限。 分配与用户所需的访问权限相匹配的配置文件：
+使用以下步骤，为用户授予特定环境中的 [!DNL Adobe Experience Manager] as a Cloud Service 访问权限。 请根据用户所需的访问权限分配相应的轮廓：
 
-* **[!UICONTROL AEM用户]** — 查看内容源。
-* **[!UICONTROL AEM管理员]** — 创建和编辑内容源。
+* **[!UICONTROL AEM 用户]** – 查看内容源。
+* **[!UICONTROL AEM 管理员]** – 创建和编辑内容源。
 
 >[!NOTE]
 >
->用户必须属于AEM产品配置文件，如&#x200B;**[!UICONTROL AEM Users]**&#x200B;或&#x200B;**[!UICONTROL AEM Administrators]**，才能访问AEM。 仅访问Cloud Manager是不够的。
+>用户必须属于 AEM 产品轮廓（如 **[!UICONTROL AEM 用户]**&#x200B;或 **[!UICONTROL AEM 管理员]**），才能访问 AEM。 仅拥有 Cloud Manager 访问权限并不足够。
 
-要分配这些配置文件，您必须是具有[!UICONTROL 业务负责人] Cloud Manager产品配置文件的系统管理员。 准备好用户的名称和电子邮件地址。
+要分配这些轮廓，您必须是具有 [!UICONTROL Business Owner] Cloud Manager 产品轮廓的系统管理员。 请提前准备好用户的姓名和电子邮件地址。
 
-1. 在[Cloud Manager](https://my.cloudmanager.adobe.com/)中，导航到您的项目并为目标环境选择&#x200B;**[!UICONTROL 管理访问权限]**。 将为该环境打开一个新选项卡[!DNL Adobe Admin Console]。
-1. 为&#x200B;**发布**&#x200B;层选择&#x200B;**[!UICONTROL AEM用户]**&#x200B;或&#x200B;**[!UICONTROL AEM管理员]**&#x200B;产品配置文件 — 例如，`AEM Administrators - publish - Program 12345 - Environment 67890`。 内容人工智能对发布的内容编制索引，因此用户档案必须在发布级别分配，而不是在作者级别分配。
+1. 在[Cloud Manager](https://my.cloudmanager.adobe.com/)中，导航到您的项目，并为目标环境选择&#x200B;**[!UICONTROL 管理访问权限]**。 系统将在新标签页中打开该环境对应的 [!DNL Adobe Admin Console]。
+1. 选择&#x200B;**发布**&#x200B;层级的 **[!UICONTROL AEM 用户]**&#x200B;或 **[!UICONTROL AEM 管理员]**&#x200B;产品轮廓，例如，`AEM Administrators - publish - Program 12345 - Environment 67890`。 内容人工智能会为已发布内容建立索引，因此必须在发布层级分配轮廓，而不是创作层级。
 1. 选择&#x200B;**[!UICONTROL 添加用户]**。
-1. 输入用户的名称和电子邮件地址，然后保存更改。 用户将会添加到产品配置文件。
+1. 输入用户的姓名和电子邮件地址，然后保存更改。 该用户将添加到产品轮廓中。
 
-对用户需要访问的每个环境（如开发、暂存或生产）重复这些步骤。
+对于用户需要访问的每个环境（如开发、预发布或生产环境），请重复执行上述步骤。
 
 >[!CAUTION]
 >
->请勿编辑或删除名为&#x200B;**[!UICONTROL AEM Administrators]**&#x200B;或&#x200B;**[!UICONTROL AEM Users]**&#x200B;的默认产品配置文件。 重命名&#x200B;**[!UICONTROL AEM Administrators]**&#x200B;会删除分配给它的每个人的管理员权限。
+>请勿编辑或删除名为 **[!UICONTROL AEM 管理员]**&#x200B;或 **[!UICONTROL AEM 用户]**&#x200B;的默认产品轮廓。 重命名 **[!UICONTROL AEM 管理员]**&#x200B;会导致所有分配到该轮廓的用户失去管理员权限。
 
-### 验证分配 {#verify-assignment}
+### 验证分配结果 {#verify-assignment}
 
-验证分配是否成功：
+要验证分配是否成功：
 
-1. 在[!DNL Admin Console]中，重新打开您分配的产品配置文件。
-1. 确认该用户出现在成员列表中。
+1. 在 [!DNL Admin Console] 中，重新打开您分配的产品轮廓。
+1. 确认该用户已显示在成员列表中。
 
-如果您正在排查访问或令牌问题，请确认已将用户直接添加到产品配置文件中，而非仅通过组进行添加。
+如果您正在排查访问权限或令牌相关问题，请确认用户是直接添加到产品轮廓中的，而不仅仅是通过用户组获得权限。
 
 ## 步骤 1：打开“内容人工智能配置”选项卡 {#open-tab}
 
