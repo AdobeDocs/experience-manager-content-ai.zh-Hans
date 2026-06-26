@@ -7,9 +7,9 @@ level: Beginner
 solution: Experience Manager
 keywords: AEM 内容人工智能、Adobe Developer Console、身份验证、服务器到服务器、API 密钥、访问令牌
 source-git-commit: 2ff1bbdd3ff224e2a6b389243c78af5fd228d5ee
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '714'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -27,7 +27,7 @@ ht-degree: 98%
 * 您拥有访问组织 [Adobe Developer Console](https://developer.adobe.com/console/) 的权限。
 * 您已在 **Adobe Admin Console** 中被添加为 AEM 内容人工智能 Services 产品轮廓的&#x200B;**开发人员**。 如果没有该角色，**[!UICONTROL AEM 内容人工智能 Services]** API 卡片将显示为禁用状态，并且不会显示&#x200B;**[!UICONTROL 服务器到服务器]**&#x200B;身份验证选项。
 * 您已了解要选择的产品轮廓对应的项目编号和环境编号（例如：`AEM User - publish - Program 12345 - Environment 67890`）。
-* 您在该程序对应的 Admin Console 中拥有&#x200B;**[系统管理员](https://experienceleague.adobe.com/zh-hans/docs/support-resources/adobe-support-tools-guide/adobe-admin-console/admin-roles)**&#x200B;角色。 利用此角色，可管理产品配置文件并将用户分配给环境。
+* 您在该程序对应的 Admin Console 中拥有&#x200B;**[系统管理员](https://experienceleague.adobe.com/zh-hans/docs/support-resources/adobe-support-tools-guide/adobe-admin-console/admin-roles)**&#x200B;角色。此角色允许您管理产品轮廓，并向环境分配用户。
 
 ## 选择身份验证方式 {#choose-auth}
 
