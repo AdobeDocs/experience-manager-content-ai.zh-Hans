@@ -125,7 +125,7 @@ AEM内容AI 搜索是一个[!DNL AEM]核心组件，它允许访客直接从页�
 * 至少已创建一个Source内容，且处于&#x200B;**可用**&#x200B;状态。
 * **AEM Content AI客户端** OSGi配置(`ContentAIClientImpl`)在创作和发布时设置，具有有效的API凭据和默认的内容Source。
 
-有关完整的安装指南 — 使作者可以使用组件、连接其客户端库以及配置对话框 — 请参阅[核心组件文档](https://www.adobe.com/go/aem_cmp_library)。
+有关完整的安装指南 — 使作者可以使用组件、连接其客户端库以及配置对话框 — 请参阅[核心组件文档](https://www.adobe.com/go/aem_cmp_library_cn)。
 
 ## 恭喜！ {#congratulations}
 
@@ -137,4 +137,4 @@ AEM内容AI 搜索是一个[!DNL AEM]核心组件，它允许访客直接从页�
 
 * [设置Adobe Developer Console项目](setup-adc-project.md) — 创建直接调用内容人工智能API所需的ADC项目和凭据。
 * [内容人工智能API引用](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/experimental/contentai/) — 使用语义、生成性或混合搜索端点查询索引内容。
-* [核心组件文档](https://www.adobe.com/go/aem_cmp_library) — 有关代理组件和模板策略的更多信息。
+* [核心组件文档](https://www.adobe.com/go/aem_cmp_library_cn) — 有关代理组件和模板策略的更多信息。
