@@ -6,13 +6,11 @@ role: Developer, Admin
 level: Beginner
 solution: Experience Manager
 keywords: AEM 内容人工智能、内容人工智能源、内容获取、Cloud Manager、Adobe Developer Console
-source-git-commit: d40fcb4a41c717ef4e6c82d95a36976b1f4de825
-workflow-type: ht
-source-wordcount: '1276'
-ht-degree: 100%
-
+source-git-commit: d8bd542a6a2d7e467b0d50e022f1e019d6f5b5ff
+workflow-type: tm+mt
+source-wordcount: '1671'
+ht-degree: 76%
 ---
-
 
 # 设置和管理您的内容人工智能源
 
@@ -23,9 +21,41 @@ ht-degree: 100%
 开始之前，请确保满足以下条件：
 
 * 您拥有一个处于活动状态的 Cloud Manager 程序，并且其中至少包含一个 AEM as a Cloud Service 环境。
+* 您具有Cloud Manager产品配置文件并且可以登录到Cloud Manager — 请参阅下面的[访问Cloud Manager](#cloud-manager-access)。
 * 您的用户已分配到目标环境的 **AEM 用户**&#x200B;产品轮廓，该轮廓允许用户查看内容源。
 * 您的用户已分配到目标环境的 **AEM 管理员**&#x200B;产品轮廓，该轮廓允许用户创建和编辑内容源。 仅拥有 Cloud Manager 访问权限并不足够，请参阅下文的[将用户分配到 AEM 产品轮廓](#assign-product-profile)。
 * 环境产品轮廓已在 **Adobe Admin Console** 中完成配置。
+
+## 访问Cloud Manager {#cloud-manager-access}
+
+要打开&#x200B;**[!UICONTROL Content AI配置]**&#x200B;选项卡，您需要访问Cloud Manager UI。 您组织的[!DNL Adobe Admin Console]管理员（系统管理员或产品管理员）授予此访问权限。
+
+1. 联系您的[[!DNL Adobe Admin Console]](https://adminconsole.adobe.com/)管理员。 如果您还不是组织的成员，请要求管理员添加您的Adobe ID或电子邮件地址。
+1. 要求管理员为您分配一个适用于组织的AEM as a Cloud Service项目的Cloud Manager产品配置文件：
+
+   | 产品配置文件 | 它允许 |
+   | --- | --- |
+   | **[!UICONTROL 业务负责人]** | 管理程序。 具有广泛的Cloud Manager权限，包括&#x200B;**[!UICONTROL 管理访问权限]**。 |
+   | **[!UICONTROL 部署管理员]** | 管理环境、部署和管道。 |
+   | **[!UICONTROL 项目管理员]** | 管理团队设置和项目监督。 |
+   | **[!UICONTROL 开发人员]** | 可与代码和Git配合使用。 的Cloud Manager权限有限。 |
+
+1. 要打开Cloud Manager，请登录到[Cloud Manager](https://my.cloudmanager.adobe.com/)，或转到[[!DNL Adobe Experience Cloud]](https://experience.adobe.com/) > **[!DNL Experience Manager]** > **[!UICONTROL Cloud Manager]**。 如果您的Adobe ID属于多个组织，请选择正确的组织。
+
+>[!NOTE]
+>
+>Cloud Manager产品配置文件不提供对内容源的访问权限。 您还需要该环境的&#x200B;**[!UICONTROL AEM用户]**&#x200B;或&#x200B;**[!UICONTROL AEM管理员]**&#x200B;产品配置文件 — 请参阅[将用户分配给AEM产品配置文件](#assign-product-profile)。 仅具有默认Cloud Manager用户角色的用户可以打开环境，但无法获取程序级别的访问权限。
+
+如果您登录但看不到项目或&#x200B;**[!UICONTROL Content AI配置]**&#x200B;选项卡，请要求管理员验证您分配的产品配置文件。 此外，请确认您在登录时选择了正确的组织。 AEM Managed Services使用与AEM as a Cloud Service不同的[!DNL Admin Console]产品上下文和设置。
+
+要在初始登录期间创建程序，系统管理员必须首先具有&#x200B;**[!UICONTROL 业务负责人]**&#x200B;配置文件并登录到Cloud Manager。
+
+有关更多信息，请参阅：
+
+* [将团队成员分配给Cloud Manager产品配置文件](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/onboarding/journey/assign-profiles-cloud-manager)
+* [访问 Cloud Manager](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-cloud-service/content/onboarding/journey/cloud-manager)
+* [AEM as a Cloud Service团队和产品配置文件](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/onboarding/concepts/aem-cs-team-product-profiles)
+* [添加用户和角色](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-manager/content/requirements/users-and-roles)
 
 ## 将用户分配到 AEM 产品轮廓 {#assign-product-profile}
 
@@ -36,12 +66,14 @@ ht-degree: 100%
 
 >[!NOTE]
 >
->用户必须属于 AEM 产品轮廓（如 **[!UICONTROL AEM 用户]**&#x200B;或 **[!UICONTROL AEM 管理员]**），才能访问 AEM。 仅拥有 Cloud Manager 访问权限并不足够。
+>用户必须属于 AEM 产品配置文件（如 **[!UICONTROL AEM 用户]**&#x200B;或 **[!UICONTROL AEM 管理员]**），才能访问 AEM。 仅拥有 Cloud Manager 访问权限并不足够。
 
-要分配这些轮廓，您必须是具有 [!UICONTROL Business Owner] Cloud Manager 产品轮廓的系统管理员。 请提前准备好用户的姓名和电子邮件地址。
+要分配这些配置文件，您必须是具有 [!UICONTROL Business Owner] Cloud Manager 产品配置文件的系统管理员。 请提前准备好用户的姓名和电子邮件地址。
 
 1. 在[Cloud Manager](https://my.cloudmanager.adobe.com/)中，导航到您的项目，并为目标环境选择&#x200B;**[!UICONTROL 管理访问权限]**。 系统将在新标签页中打开该环境对应的 [!DNL Adobe Admin Console]。
-1. 选择&#x200B;**发布**&#x200B;层级的 **[!UICONTROL AEM 用户]**&#x200B;或 **[!UICONTROL AEM 管理员]**&#x200B;产品轮廓，例如，`AEM Administrators - publish - Program 12345 - Environment 67890`。 内容人工智能会为已发布内容建立索引，因此必须在发布层级分配轮廓，而不是创作层级。
+1. 为&#x200B;**作者**&#x200B;和&#x200B;**发布**&#x200B;层选择&#x200B;**[!UICONTROL AEM用户]**&#x200B;或&#x200B;**[!UICONTROL AEM管理员]**&#x200B;产品配置文件 — 例如，`AEM Administrators - author - Program 12345 - Environment 67890`和`AEM Administrators - publish - Program 12345 - Environment 67890`。
+   * **[!UICONTROL AEM用户]** — 只读操作。
+   * **[!UICONTROL AEM管理员]** — 写入操作，例如创建、编辑或删除内容源并触发客户获取。
 1. 选择&#x200B;**[!UICONTROL 添加用户]**。
 1. 输入用户的姓名和电子邮件地址，然后保存更改。 该用户将添加到产品轮廓中。
 
@@ -102,7 +134,7 @@ ht-degree: 100%
 
 ## 步骤 3 - 重新运行获取 {#trigger-acquisition}
 
-创建源时会自动运行获取，此后将按照&#x200B;**[!UICONTROL 刷新频率]**&#x200B;中设置的计划自动运行。您也可以随时手动触发运行，例如，在发布新内容后立即重新编制索引。
+创建源时会自动运行获取，此后将按照&#x200B;**[!UICONTROL 刷新频率]**&#x200B;中设置的计划自动运行。 您也可以随时手动触发运行，例如，在发布新内容后立即重新编制索引。
 
 1. 在源列表中，选择源旁边的&#x200B;**更多操作**（…）图标，然后选择&#x200B;**[!UICONTROL 触发获取]**。
 
@@ -118,7 +150,7 @@ ht-degree: 100%
 
 | 状态 | 含义 |
 | --- | --- |
-| **新建** | 源刚刚创建，自动获取尚未开始。此状态持续时间较短。 |
+| **新建** | 源刚刚创建，自动获取尚未开始。 此状态持续时间较短。 |
 | **正在索引** | 内容获取正在进行中；系统正在抓取内容并建立索引。 |
 | **可用** | 索引已完成，源已可用于搜索查询。 |
 
@@ -154,7 +186,7 @@ ht-degree: 100%
 
    ![修改“内容人工智能源”对话框，其中可编辑字段已高亮显示](../assets/content-ai-onboarding-step-12.png)
 
-1. 选择&#x200B;**[!UICONTROL 保存]**&#x200B;以应用更改。源列表会更新并显示您所做的更改。
+1. 选择&#x200B;**[!UICONTROL 保存]**&#x200B;以应用更改。 源列表会更新并显示您所做的更改。
 
 ### 删除源 {#delete}
 
