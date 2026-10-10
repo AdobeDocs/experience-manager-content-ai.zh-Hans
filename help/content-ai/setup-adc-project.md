@@ -1,22 +1,31 @@
 ---
 title: 为 AEM 内容人工智能设置 Adobe Developer Console 项目
-description: 了解如何设置 Adobe Developer Console 项目，以及如何使用服务器到服务器或 API Key 身份验证方式对 AEM 内容人工智能 Services API 调用进行身份验证。
+description: 了解如何设置 Adobe Developer Console 项目，以及如何使用服务器到服务器或 API Key 身份验证方式对 AEM 内容人工智能服务 API 调用进行身份验证。
 topic: Configuration
 role: Developer, Admin
 level: Beginner
 solution: Experience Manager
 keywords: AEM 内容人工智能、Adobe Developer Console、身份验证、服务器到服务器、API 密钥、访问令牌
-source-git-commit: 2ff1bbdd3ff224e2a6b389243c78af5fd228d5ee
-workflow-type: ht
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+level_v2:
+  - id: e8ccd51f-da0d-4e3b-939b-e30d5ebb1ea5
+    internal-label: Beginner
+source-git-commit: 1364d35876ef0fcc502a3d02f8025ee7df067daf
+workflow-type: tm+mt
 source-wordcount: '714'
 ht-degree: 100%
-
 ---
-
 
 # 设置 Adobe Developer Console 项目 {#configure-adc-project}
 
-要调用 AEM 内容人工智能 Services API，您需要使用由 Adobe Developer Console（ADC）项目颁发的凭据。 本文将指导您创建项目、选择身份验证方式，以及生成每次 API 请求所需的凭据。
+要调用 AEM 内容人工智能服务 API，您需要由 Adobe Developer Console（ADC）项目颁发的凭据。 本文将指导您创建项目、选择身份验证方式，以及生成每次 API 请求所需的凭据。
 
 首先，访问您组织的 [Adobe Developer Console](https://developer.adobe.com/console/)。
 
@@ -27,11 +36,11 @@ ht-degree: 100%
 * 您拥有访问组织 [Adobe Developer Console](https://developer.adobe.com/console/) 的权限。
 * 您已在 **Adobe Admin Console** 中被添加为 AEM 内容人工智能 Services 产品轮廓的&#x200B;**开发人员**。 如果没有该角色，**[!UICONTROL AEM 内容人工智能 Services]** API 卡片将显示为禁用状态，并且不会显示&#x200B;**[!UICONTROL 服务器到服务器]**&#x200B;身份验证选项。
 * 您已了解要选择的产品轮廓对应的项目编号和环境编号（例如：`AEM User - publish - Program 12345 - Environment 67890`）。
-* 您在该程序对应的 Admin Console 中拥有&#x200B;**[系统管理员](https://experienceleague.adobe.com/zh-hans/docs/support-resources/adobe-support-tools-guide/adobe-admin-console/admin-roles)**&#x200B;角色。此角色允许您管理产品轮廓，并向环境分配用户。
+* 您在该程序对应的 Admin Console 中拥有&#x200B;**[系统管理员](https://experienceleague.adobe.com/zh-hans/docs/support-resources/adobe-support-tools-guide/adobe-admin-console/admin-roles)**&#x200B;角色。 此角色允许您管理产品轮廓，并向环境分配用户。
 
 ## 选择身份验证方式 {#choose-auth}
 
-AEM 内容人工智能 Services 支持两种身份验证方式。 请选择与您的集成场景相匹配的方式：
+AEM 内容人工智能服务支持两种身份验证方式。 请选择与您的集成场景相匹配的方式：
 
 | 方法 | 最适合 |
 | --- | --- |
@@ -48,7 +57,7 @@ AEM 内容人工智能 Services 支持两种身份验证方式。 请选择与�
 
    >[!NOTE]
    >
-   >如果 API 卡片显示“需要许可证”并处于禁用状态，则您的 AEM as a Cloud Service 环境可能尚未完成现代化升级。 请参阅 [AEM as a Cloud Service 环境现代化升级](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-learn/cloud-service/aem-apis/openapis/setup#modernization-of-aem-as-a-cloud-service-environment)。
+   >如果 API 信息卡显示“需要许可证”并处于禁用状态，则您的 AEM as a Cloud Service 环境可能尚未完成现代化升级。 请参阅 [AEM as a Cloud Service 环境现代化升级](https://experienceleague.adobe.com/zh-hans/docs/experience-manager-learn/cloud-service/aem-apis/openapis/setup#modernization-of-aem-as-a-cloud-service-environment)。
 
 1. 在&#x200B;**[!UICONTROL 配置 API]** 对话框中，选择&#x200B;**[!UICONTROL 服务器到服务器]**&#x200B;身份验证方式。
 
@@ -112,7 +121,7 @@ AEM 内容人工智能 Services 支持两种身份验证方式。 请选择与�
    x-api-key: YOUR_API_KEY
    ```
 
-   您的项目现已准备就绪。 调用 AEM 内容人工智能 Services 时，请在每个请求中使用该密钥。
+   您的项目现已准备就绪。 调用 AEM 内容人工智能服务时，请在每个请求中使用该密钥。
 
 ## 后续步骤 {#next-steps}
 

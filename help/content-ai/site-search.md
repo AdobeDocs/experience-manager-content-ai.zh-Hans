@@ -6,7 +6,18 @@ role: Developer, Admin
 level: Beginner
 solution: Experience Manager
 keywords: AEM 内容人工智能、AEM 内容人工智能搜索、GenSearch、快速搜索、内容人工智能源、获取、Cloud Manager
-source-git-commit: d8bd542a6a2d7e467b0d50e022f1e019d6f5b5ff
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
+level_v2:
+  - id: e8ccd51f-da0d-4e3b-939b-e30d5ebb1ea5
+    internal-label: Beginner
+source-git-commit: 1364d35876ef0fcc502a3d02f8025ee7df067daf
 workflow-type: tm+mt
 source-wordcount: '1458'
 ht-degree: 77%
