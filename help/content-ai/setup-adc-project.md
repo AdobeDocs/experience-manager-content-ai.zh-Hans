@@ -17,10 +17,10 @@ role_v2:
 level_v2:
   - id: e8ccd51f-da0d-4e3b-939b-e30d5ebb1ea5
     internal-label: Beginner
-source-git-commit: 1364d35876ef0fcc502a3d02f8025ee7df067daf
-workflow-type: ht
+source-git-commit: fb7ec4db1f4d90acc88b594de4c3e4ca720be2df
+workflow-type: tm+mt
 source-wordcount: '714'
-ht-degree: 100%
+ht-degree: 98%
 ---
 
 # 设置 Adobe Developer Console 项目 {#configure-adc-project}
@@ -126,4 +126,4 @@ AEM 内容人工智能服务支持两种身份验证方式。 请选择与您的
 ## 后续步骤 {#next-steps}
 
 * [管理您的内容源](contentsources.md)：在 Cloud Manager 中配置内容源并触发内容获取。
-* [内容人工智能 API 参考](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/experimental/contentai/)：使用访问令牌或 API 密钥查询已建立索引的内容。
+* [内容人工智能 API 参考](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/stable/contentai/)：使用访问令牌或 API 密钥查询已建立索引的内容。

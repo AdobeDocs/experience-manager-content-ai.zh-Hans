@@ -17,10 +17,10 @@ role_v2:
 level_v2:
   - id: e8ccd51f-da0d-4e3b-939b-e30d5ebb1ea5
     internal-label: Beginner
-source-git-commit: 1364d35876ef0fcc502a3d02f8025ee7df067daf
-workflow-type: ht
+source-git-commit: fb7ec4db1f4d90acc88b594de4c3e4ca720be2df
+workflow-type: tm+mt
 source-wordcount: '1458'
-ht-degree: 100%
+ht-degree: 99%
 ---
 
 # AEM 内容人工智能搜索入门
@@ -145,5 +145,5 @@ AEM 内容人工智能搜索是一个 [!DNL AEM] 核心组件，访客可以通�
 ## 后续步骤 {#next-steps}
 
 * [设置 Adobe Developer Console 项目](setup-adc-project.md) — 创建直接调用内容人工智能 API 所需的 ADC 项目和凭据。
-* [内容人工智能 API 参考](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/experimental/contentai/) — 使用语义搜索、生成式搜索或混合搜索端点查询已编入索引的内容。
+* [内容人工智能 API 参考](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/stable/contentai/) — 使用语义搜索、生成式搜索或混合搜索端点查询已编入索引的内容。
 * [核心组件文档](https://www.adobe.com/go/aem_cmp_library_cn) — 详细了解代理组件和模板策略。
