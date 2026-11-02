@@ -18,9 +18,9 @@ level_v2:
   - id: e8ccd51f-da0d-4e3b-939b-e30d5ebb1ea5
     internal-label: Beginner
 source-git-commit: fb7ec4db1f4d90acc88b594de4c3e4ca720be2df
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1671'
-ht-degree: 99%
+ht-degree: 100%
 ---
 
 # 设置和管理您的内容人工智能源
